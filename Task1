@@ -1,0 +1,79 @@
+# Define a dictionary to store grades
+grades = {}
+
+# Define a function to add a grade
+def add_grade(subject, grade):
+  if subject in grades:
+    grades[subject].append(grade)
+  else:
+    grades[subject] = [grade]
+
+# Define a function to calculate the average grade
+def calculate_average(grades):
+  total = 0
+  count = 0
+  for subject, grade_list in grades.items():
+    total += sum(grade_list)
+    count += len(grade_list)
+  return total / count
+
+# Define a function to convert a grade to a letter grade
+def grade_to_letter(grade):
+  if grade >= 90:
+    return "A"
+  elif grade >= 80:
+    return "B"
+  elif grade >= 70:
+    return "C"
+  elif grade >= 60:
+    return "D"
+  else:
+    return "F"
+
+# Define a function to calculate the GPA
+def calculate_gpa(average_grade):
+  if average_grade >= 90:
+    return 4.0
+  elif average_grade >= 80:
+    return 3.0
+  elif average_grade >= 70:
+    return 2.0
+  elif average_grade >= 60:
+    return 1.0
+  else:
+    return 0.0
+
+# Main program
+print("Welcome to the student grade tracker!")
+
+while True:
+  print("Options:")
+  print("1. Add a grade")
+  print("2. Calculate average grade")
+  print("3. Display grades")
+  print("4. Quit")
+  choice = int(input("Enter your choice: "))
+
+  if choice == 1:
+    subject = input("Enter the subject: ")
+    grade = float(input("Enter the grade: "))
+    add_grade(subject, grade)
+    print("Grade added!")
+
+  elif choice == 2:
+    average_grade = calculate_average(grades)
+    print("Average grade:", average_grade)
+    print("Letter grade:", grade_to_letter(average_grade))
+    print("GPA:", calculate_gpa(average_grade))
+
+  elif choice == 3:
+    print("Grades:")
+    for subject, grade_list in grades.items():
+      print(subject, ":", grade_list)
+
+  elif choice == 4:
+    print("Goodbye!")
+    break
+
+  else:
+    print("Invalid choice. Try again!")
