@@ -1,9 +1,9 @@
-**Name:** Pallak Anand
-**Company:** CODTECH IT SOLUTIONS
-**ID:** CT12PD155
-**Domain:** Python Programming
-**Duration:** May to July
-**Mentor:** SRAVANI GOUNI
+**Name:** Pallak Anand 
+**Company:** CODTECH IT SOLUTIONS 
+**ID:** CT12PD155 
+**Domain:** Python Programming 
+**Duration:** May to July 
+**Mentor:** SRAVANI GOUNI 
 
 
 ## OVERVIEW OF THE PROJECT
